@@ -38,7 +38,7 @@ while True:
 
     choice = input("\nPlay again?")
 
-    if choice.lower() != 'y':
+    if choice.lower() not in ['yes', 'y']:
         print("\nFinal Score")
         print("You:", player_score)
         print("Computer:", computer_score)
