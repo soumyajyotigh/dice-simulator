@@ -13,19 +13,29 @@ computer_score = 0
 print("Welcome to the Dice Game!")
 
 while True:
-    input("\nPress Enter to roll the dice...")
+    input("\nPress Enter to roll the dice...🎲 🎲")
 
-    player_roll = random.randint(1,6)
-    computer_roll = random.randint(1,6)
+    # Player dice
+    player_dice1 = random.randint(1,6)
+    player_dice2 = random.randint(1,6)
+    player_total = player_dice1 + player_dice2
 
-    print("You rolled:", dice[player_roll])
-    print("Computer rolled:", dice[computer_roll])
+    # Computer dice
+    computer_dice1 = random.randint(1,6)
+    computer_dice2 = random.randint(1,6)
+    computer_total = computer_dice1 + computer_dice2
 
-    if player_roll > computer_roll:
+    print("\nYou rolled:", dice[player_dice1], "and", dice[player_dice2])
+    print("Your total:", player_total)
+
+    print("\nComputer rolled:", dice[computer_dice1], "and", dice[computer_dice2])
+    print("Computer total:", computer_total)
+
+    if player_total > computer_total:
         print("You win this round! ")
         player_score += 1
 
-    elif player_roll < computer_roll:
+    elif player_total < computer_total:
         print("Computer wins this round! ")
         computer_score += 1
 
