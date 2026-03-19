@@ -1,4 +1,4 @@
-import numpy as np
+import random
 dice = {
 1: "[⚀]",
 2: "[⚁]",
@@ -16,13 +16,13 @@ while True:
     input("\nPress Enter to roll the dice...🎲 🎲")
 
     # Player dice
-    player_dice1 = np.random.randint(1,7)
-    player_dice2 = np.random.randint(1,7)
+    player_dice1 = random.randint(1,6)
+    player_dice2 = random.randint(1,6)
     player_total = player_dice1 + player_dice2
 
     # Computer dice
-    computer_dice1 = np.random.randint(1,7)
-    computer_dice2 = np.random.randint(1,7)
+    computer_dice1 = random.randint(1,6)
+    computer_dice2 = random.randint(1,6)
     computer_total = computer_dice1 + computer_dice2
 
     print("\nYou rolled:", dice[player_dice1], "and", dice[player_dice2])
